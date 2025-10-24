@@ -46,3 +46,4 @@ Este proyecto fue desarrollado por el grupo **AnimalTech**.
 - Exportación a CSV.
 
 > Este proyecto forma parte del curso de *Diseño y Programación Web*.
+```
