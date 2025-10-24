@@ -47,3 +47,13 @@ Este proyecto fue desarrollado por el grupo **AnimalTech**.
 
 > Este proyecto forma parte del curso de *Diseño y Programación Web*.
 ```
+# Registro de Pesaje de Cuyes
+
+Este proyecto fue desarrollado por el grupo **AnimalTech**.
+
+## Funciones principales
+- Registro de peso por posa.
+- Cálculo del promedio de peso.
+- Exportación a CSV.
+
+> Este proyecto forma parte del curso de *Diseño y Programación Web*.
