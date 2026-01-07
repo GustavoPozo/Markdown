@@ -1,0 +1,31 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME=""                      # SIN TEMA (ni agnoster ni p10k)
+plugins=(git)
+
+# Silenciar el wizard de p10k si estuviera instalado
+export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
+# Cargar oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# --- Prompt plano Aurora16 (celeste real) ---
+setopt PROMPT_SUBST
+export COLORTERM=truecolor
+
+# Rama git si existe
+git_branch() {
+  local b
+  b=$(git symbolic-ref --short HEAD 2>/dev/null) || return
+  print -n " %F{#5CC8FF}($b)%f"   # celeste agradable
+}
+
+# usuario/host en verde, ruta + rama en celeste HEX
+PROMPT='%F{10}%n@%m%f  %F{#5CC8FF}%~%f$(git_branch)
+› '
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+alias kiro="kiro-cli"
